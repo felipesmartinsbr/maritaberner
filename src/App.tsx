@@ -157,7 +157,7 @@ export default function App() {
 
           {/* Name & Handle */}
           <h1 className="font-serif text-2xl font-medium leading-tight text-luxury-text">
-            Marii Taberner
+            Mari Taberner
           </h1>
 
           {/* SOCIALS SECTION (Moved here) */}
