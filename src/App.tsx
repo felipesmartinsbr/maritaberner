@@ -73,7 +73,7 @@ const LinkCard: React.FC<{ link: LinkData; index: number }> = ({ link, index }) 
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-full border-[0.5px] border-luxury-rose-gold/40 bg-white p-3.5 shadow-[0_2px_10px_-3px_rgba(230,183,169,0.15)] transition-all duration-500 hover:-translate-y-0.5 hover:border-luxury-rose-gold hover:shadow-[0_8px_20px_-5px_rgba(230,183,169,0.25)] active:scale-[0.99] animate-fade-in-up opacity-0 ${delayClass}`}
+      className={`group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-full border-[0.5px] border-luxury-rose-gold/40 bg-white p-2.5 shadow-[0_2px_10px_-3px_rgba(230,183,169,0.15)] transition-all duration-500 hover:-translate-y-0.5 hover:border-luxury-rose-gold hover:shadow-[0_8px_20px_-5px_rgba(230,183,169,0.25)] active:scale-[0.99] animate-fade-in-up opacity-0 ${delayClass}`}
     >
       <div className="flex w-full items-center justify-between px-2">
         {/* Left: Spacer to balance layout */}
@@ -120,7 +120,7 @@ const LinkCard: React.FC<{ link: LinkData; index: number }> = ({ link, index }) 
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-luxury-white via-luxury-off-white to-[#FDF5F6] px-5 py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen w-full bg-gradient-to-b from-luxury-white via-luxury-off-white to-[#FDF5F6] px-5 py-8 sm:px-6 lg:px-8">
       {/* Background Texture Overlay (Optional subtle noise) */}
       <div className="pointer-events-none fixed inset-0 opacity-[0.015] mix-blend-multiply"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
@@ -129,11 +129,11 @@ export default function App() {
       <div className="relative mx-auto max-w-[380px]">
 
         {/* HERO SECTION */}
-        <div className="mb-10 flex flex-col items-center text-center animate-fade-in-up opacity-0">
+        <div className="mb-6 flex flex-col items-center text-center animate-fade-in-up opacity-0">
           {/* Profile Image */}
-          <div className="relative mb-6">
-            <div className="absolute -inset-3 animate-pulse rounded-full border border-luxury-rose-gold/20 opacity-50" />
-            <div className="relative h-32 w-32 overflow-hidden rounded-full border-[1px] border-luxury-rose-gold p-1 shadow-[0_10px_40px_-10px_rgba(230,183,169,0.4)]">
+          <div className="relative mb-4">
+            <div className="absolute -inset-2 animate-pulse rounded-full border border-luxury-rose-gold/20 opacity-50" />
+            <div className="relative h-24 w-24 overflow-hidden rounded-full border-[1px] border-luxury-rose-gold p-1 shadow-[0_10px_40px_-10px_rgba(230,183,169,0.4)]">
               <div className="h-full w-full overflow-hidden rounded-full">
                 <img
                   src="https://i.imgur.com/j0tFQ1f.jpeg"
@@ -156,12 +156,12 @@ export default function App() {
           </div>
 
           {/* Name & Handle */}
-          <h1 className="font-serif text-[2rem] font-medium leading-tight text-luxury-text">
-            @marii.taberner
+          <h1 className="font-serif text-2xl font-medium leading-tight text-luxury-text">
+            Marii Taberner
           </h1>
 
           {/* SOCIALS SECTION (Moved here) */}
-          <div className="mt-4 flex justify-center gap-4">
+          <div className="mt-2 flex justify-center gap-4">
             <a
               href="https://www.instagram.com/marii.taberner?igsh=ZHo3b21pZmNsanA3&utm_source=qr"
               target="_blank"
@@ -182,21 +182,21 @@ export default function App() {
             </a>
           </div>
 
-          <div className="mt-5 h-[1px] w-12 bg-luxury-rose-gold/50" />
+          <div className="mt-4 h-[1px] w-12 bg-luxury-rose-gold/50" />
           <p className="mt-3 font-sans text-[10px] font-medium uppercase tracking-[0.3em] text-luxury-text-light">
             Links & Cupons
           </p>
         </div>
 
         {/* LINKS SECTION */}
-        <div className="flex flex-col gap-3.5">
+        <div className="flex flex-col gap-2">
           {links.map((link, index) => (
             <LinkCard key={link.title} link={link} index={index} />
           ))}
         </div>
 
         {/* FOOTER CTA (Moved here) */}
-        <div className="mt-10 text-center animate-fade-in-up opacity-0 delay-700">
+        <div className="mt-6 text-center animate-fade-in-up opacity-0 delay-700">
           <p className="font-serif text-xs italic text-luxury-text-light/60">
             Aberta para novas parcerias via direct.
           </p>
